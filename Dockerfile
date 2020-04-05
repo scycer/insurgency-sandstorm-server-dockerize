@@ -26,5 +26,5 @@ RUN ./home/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/
 COPY config/ini/ ${CONFIGINI}
 COPY config/txt/ ${CONFIGTXT}
 
-ENTRYPOINT ./home/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/steam/steamcmd/sandstorm/ +app_update 581330 +quit && \
-./home/steam/steamcmd/sandstorm/Insurgency/Binaries/Linux/InsurgencyServer-Linux-Shipping Sinjar?Scenario=Scenario_Hillside_Checkpoint_Security -Password=$PASSWORD -hostname=$HOSTNAME -Port=$PORT -QueryPort=$QUERYPORT -MapCycle=MapCycle -mutators=AllYouCanEat
+ENTRYPOINT ./home/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/steam/steamcmd/sandstorm/ +quit && \
+./home/steam/steamcmd/sandstorm/Insurgency/Binaries/Linux/InsurgencyServer-Linux-Shipping $GROUP?Scenario=$MAP?Password=balls -hostname=$HOSTNAME -Port=$PORT -QueryPort=$QUERYPORT -Password=balls  -MapCycle=MapCycle -mutators=AllYouCanEat
